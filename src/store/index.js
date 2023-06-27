@@ -12,8 +12,6 @@ const setupState = () => ({
 
 const state = setupState();
 
-const getters = {};
-
 const mutations = {
   [RESET_STATE](state) {
     Object.assign(state, setupState());
@@ -26,7 +24,6 @@ const mutations = {
 
 export default new Vuex.Store({
   state,
-  getters,
   mutations,
   plugins: [vuexPlugins],
   modules,

@@ -1,4 +1,4 @@
-export const sortAlphabetic = (key) => {
+const sortAlphabetic = (key) => {
   return (a, b) => {
     return a[key].toLowerCase().localeCompare(b[key].toLowerCase());
   };
