@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import modules from './modules';
-import { RESET_STATE, SET_FILTER } from './mutation-types';
+import { RESET_STATE, SET_SORT_KEY } from './mutation-types';
 import vuexPlugins from '@/plugins/vuex-plugins';
 
 Vue.use(Vuex);
@@ -17,7 +17,7 @@ const mutations = {
     Object.assign(state, setupState());
   },
 
-  [SET_FILTER](state, payload) {
+  [SET_SORT_KEY](state, payload) {
     state.sortKey = payload;
   },
 };

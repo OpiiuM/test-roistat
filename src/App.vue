@@ -6,12 +6,13 @@
       <div class="app__content">
         <actions-list />
 
-        <v-scroll :min-width="550">
+        <v-scroll
+          :min-width="550"
+          style="margin-top: 50px"
+        >
           <user-view-table
             :head="head"
             :body="sortedUsers"
-            is-root
-            class="app__data"
           />
         </v-scroll>
       </div>
@@ -31,7 +32,7 @@
 <script>
 import { mapState, mapGetters, mapActions, mapMutations } from 'vuex';
 import AppLayout from '@/layouts/AppLayout';
-import UserViewTable from '@/modules/app/components/UserViewTable';
+import UserViewTable from '@/modules/app/components/UserViewTable/App';
 import AddUserForm from '@/modules/app/components/AddUserForm';
 import ActionsList from '@/modules/app/components/ActionsList';
 

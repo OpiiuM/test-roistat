@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--no-wrap {
+    flex-wrap: nowrap;
+  }
+}
+
+.col-6 {
+  width: 50%;
+  max-width: 50%;
+}
+
+.col-auto {
+  flex: 1;
+}
+
+[class*="col-"] {
+  padding: rem($gap-small);
+
+  color: $white;
+  border: rem(1px) solid $blue;
+  background-color: rgba($blue, .25);
+}

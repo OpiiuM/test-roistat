@@ -6,4 +6,4 @@ export const ADD_EMPLOY = 'ADD_EMPLOY';
 export const OPEN_POPUP = 'OPEN_POPUP';
 export const CLOSE_POPUP = 'CLOSE_POPUP';
 
-export const SET_FILTER = 'SET_FILTER';
+export const SET_SORT_KEY = 'SET_SORT_KEY';

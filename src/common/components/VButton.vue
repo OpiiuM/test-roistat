@@ -1,7 +1,7 @@
 <template>
   <button
     class="button"
-    :class="`button--${color}`"
+    :class="computedClass"
   >
     <span
       v-if="$slots.prefix"
@@ -32,6 +32,19 @@ export default {
       type: String,
       default: 'blue',
       validator: (val) => COLORS.includes(val),
+    },
+    isActive: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
+  computed: {
+    computedClass() {
+      return {
+        [`button--${this.color}`]: this.color,
+        'button--active': this.isActive,
+      };
     },
   },
 };
